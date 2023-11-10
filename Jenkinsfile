@@ -9,6 +9,14 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                // Build the Maven project
+                sh 'mvn test'
+            }
+        }
+
+        
         stage('Build') {
             steps {
                 // Build the Maven project
